@@ -1,3 +1,9 @@
+Based on SupoClip by FujiwaraChoki (AGPL-3.0)." Keep the LICENSE file. AGPL requires attribution.
+Add a "My changes" section listing only what you actually built. The files suggest Buffer auto-publishing, creator workflows (30-clip batches, timed capture), ElevenLabs narration and caption timing, clip-count fixes, and diagnostics. Tell me which of these are yours.
+Remove the profanity heading. The README has a crude heading about OpusClip that's inherited from the original. It's on your profile now, so take it out.
+Tidy the root folder. Files like CREATOR_BUILD_REPORT.json, FINAL_BUILD_MANIFEST.txt, creator-diagnostics.txt and the many README variants look messy. Move them into a docs/ folder or delete them.
+Check for secrets. Open the .txt, .json and .ps1 files and make sure none contains an API key, token or password. If one does, revoke that key and generate a new one, because keys stay in the commit history. Only .env.example should be public, never .env.
+Description: replace the current one with "AI tool that turns long videos into short vertical clips, using Ollama and Gemini. Extended from the open-source SupoClip project." Add topics: python, ollama, gemini, video-processing.
 > **Production repair:** ElevenLabs narration, measured caption timing, provider fallback and diagnostics. Read [PRODUCTION_REPAIR_NOTES.md](PRODUCTION_REPAIR_NOTES.md) before rebuilding.
 
 > **Creator workflows update:** Separate Roblox edits, regular clipping, timed live capture, 30-clip batches and optional completion-triggered Buffer scheduling. Start with [CREATOR_WORKFLOWS_SETUP.md](CREATOR_WORKFLOWS_SETUP.md).
