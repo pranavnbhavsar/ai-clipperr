@@ -1,0 +1,17 @@
+SupoClip clip-count selector fix
+
+This patch fixes two visible issues:
+- Adds clip-count choices 2, 3, 4, 5, 8 and 10.
+- Mounts frontend/messages into the development container so translation updates appear without rebuilding the frontend image.
+
+Install
+1. Back up your existing project folder.
+2. Extract this ZIP into C:\Users\Tejas Bhavsar\supoclip-main (the folder containing docker-compose.yml), allowing files to be replaced.
+3. In CMD, run:
+   cd /d "C:\Users\Tejas Bhavsar\supoclip-main"
+   docker compose up -d --force-recreate frontend
+4. Wait for the command to finish, then refresh http://localhost:3107 with Ctrl+F5.
+
+No full backend rebuild is needed. The command recreates only the frontend container, preserves the database volumes, and does not overwrite .env.
+
+Expected selector choices: 2 clips, 3 clips, 4 clips, 5 clips, 8 clips, 10 clips.

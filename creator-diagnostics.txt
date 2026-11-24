@@ -1,0 +1,4 @@
+﻿SupoClip creator diagnostics (secret values redacted)
+NAME      IMAGE     COMMAND   SERVICE   CREATED   STATUS    PORTS
+
+Cannot check queued tasks; the rebuild was not started.

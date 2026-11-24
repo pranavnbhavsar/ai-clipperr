@@ -1,0 +1,32 @@
+SupoClip – Final Creator Enhancements Build
+Build date: 2026-10-30
+
+Included:
+- Complete SupoClip source project from the supplied full project archive.
+- Existing Buffer integration preserved as received; no new Buffer auto-post repair is claimed.
+- Optional persistent full-duration hook overlay: small default, medium/large options, auto/top/middle safe-zone placement.
+- Per-user music library upload/list/delete endpoints and UI.
+- Transcript-keyword mood matching against the user's own music library.
+- FFmpeg background music mixing with side-chain ducking under original audio and adjustable music level.
+- New task settings persisted for background workers.
+- Optional word-synced subtitles off by default for new tasks.
+- Tests and FINAL_CREATOR_ENHANCEMENTS_GUIDE.md.
+
+Not included by design:
+- The user's real .env file or any live credentials.
+- PostgreSQL or Redis data, Docker volumes, generated clips, or uploaded personal music.
+- node_modules, Python virtual environments, and generated caches.
+
+Validation performed in packaging environment:
+- Python compileall for backend/src and backend/tests: passed.
+- Six focused music/mood/hook tests: passed in an isolated test run.
+- FFmpeg side-chain audio mix smoke test on a synthetic video with voice audio: passed.
+- Hook small/medium/large font ordering and full-duration timing check: passed.
+- Frontend TSX syntax transpilation for home-app.tsx and creator-enhancement-control.tsx: passed.
+- docker-compose.yml YAML parse: passed.
+
+Not performed here:
+- Full backend suite (the packaging Python environment lacks the project's arq dependency used by test conftest).
+- Frontend production build/typecheck (frontend node_modules are not present in the supplied project archive).
+- Windows Docker image build or live test on the user's machine.
+- Live Backblaze or Buffer publishing test. Buffer code is intentionally left unchanged.
